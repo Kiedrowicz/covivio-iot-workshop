@@ -14,7 +14,10 @@
     "sqlite3": "^5.0.2"
   },
   "scripts": {
-    "start": "cds run"
+    "start": "cds run",
+    "build": "cds build",
+    "deploy": "cds deploy --to sqlite",
+    "release": "npm run build && npm run deploy && npm run start"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
@@ -44,19 +47,9 @@
   "cds": {
     "requires": {
       "db": {
-        "[development]": {
-          "kind": "sqlite",
-          "model": [
-            "db",
-            "srv"
-          ]
-        },
-        "[production]": {
-          "kind": "hana",
-          "model": [
-            "db",
-            "srv"
-          ]
+        "kind": "sqlite",
+        "credentials": {
+          "database": "sqlite.db"
         }
       }
     },
