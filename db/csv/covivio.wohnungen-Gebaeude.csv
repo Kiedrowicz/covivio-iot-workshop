@@ -1,0 +1,5 @@
+﻿ID;buchungskreis;wirtschaftseinheitsNr;gebaeudeNr;strasse;nummer;postleitzahl;ort
+ae61b0ab-bcee-482c-9fe5-c591ee6e05ba;0002;18852;123;Xanterner Strasse;36;46286;Dorsten
+0c6e1f9c-3120-40d4-8ecd-ae4f04e5437b;0002;99;456;Lindenstraße;85;12456;Berlin
+dcf2ca7a-3cee-42b8-a5bc-4f6afda7077a;0002;3;789;Duisburger Straße;531;46049;Oberhausen
+1ca61643-a0e3-4f3e-a147-24d6a411de04;0002;851;100;Kölner Straße;6;47051;Duisburg
