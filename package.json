@@ -11,13 +11,15 @@
     "express": "^4"
   },
   "devDependencies": {
+    "@sap/cds-dk": "^4.9.7",
     "sqlite3": "^5.0.2"
   },
   "scripts": {
     "start": "cds run",
     "build": "cds build",
     "deploy": "cds deploy --to sqlite",
-    "release": "npm run build && npm run deploy && npm run start"
+    "release": "npm run build && npm run deploy && npm run start",
+    "watch-generatedapp": "cds watch --open generatedapp/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
@@ -62,6 +64,7 @@
     "srv"
   ],
   "sapux": [
-    "app/businessglossar"
+    "app/businessglossar",
+    "app/generatedapp"
   ]
 }
