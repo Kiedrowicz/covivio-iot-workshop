@@ -1,6 +1,18 @@
 using {WohnungsService as my} from './service';
 
-annotate my.Gebaeude with @(UI : {LineItem : [
+annotate my.Gebaeude with @(UI : {
+    Badge  : {
+        $Type : '',
+        HeadLine : {
+            $Type : 'UI.DataField',
+            Value : ,
+        },
+        Title : {
+            $Type : 'UI.DataField',
+            Value : ,
+        },
+    },
+    LineItem : [
 
     {
 
