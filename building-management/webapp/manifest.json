@@ -1,7 +1,7 @@
 {
-  "_version": "1.17.0",
+  "_version": "1.40.0",
   "sap.app": {
-    "id": "building",
+    "id": "nortwind",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -13,11 +13,11 @@
     "sourceTemplate": {
       "id": "@sap-ux/fiori-elements-writer:worklist",
       "version": "0.3.6",
-      "toolsId": "35abf078-fb7c-4b1c-8321-d0e301aff7c4"
+      "toolsId": "87d641f1-b8da-496e-9f89-4c535f75e198"
     },
     "dataSources": {
       "mainService": {
-        "uri": "/sap/opu/odata/sap/ZWKS_C_BUILDING_RS_CDS/",
+        "uri": "/v2/northwind/northwind.svc/",
         "type": "OData",
         "settings": {
           "annotations": [
@@ -55,7 +55,7 @@
   "sap.ui5": {
     "flexEnabled": true,
     "dependencies": {
-      "minUI5Version": "1.71.49",
+      "minUI5Version": "1.102.1",
       "libs": {
         "sap.m": {},
         "sap.ui.core": {},
@@ -75,7 +75,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "building.i18n.i18n"
+          "bundleName": "nortwind.i18n.i18n"
         }
       },
       "": {
@@ -113,8 +113,8 @@
       "showDraftToggle": false
     },
     "pages": {
-      "ListReport|ZWKS_C_Building_RS": {
-        "entitySet": "ZWKS_C_Building_RS",
+      "ListReport|Customers": {
+        "entitySet": "Customers",
         "component": {
           "name": "sap.suite.ui.generic.template.ListReport",
           "list": true,
@@ -132,23 +132,23 @@
           }
         },
         "pages": {
-          "ObjectPage|ZWKS_C_Building_RS": {
-            "entitySet": "ZWKS_C_Building_RS",
+          "ObjectPage|Customers": {
+            "entitySet": "Customers",
             "component": {
               "name": "sap.suite.ui.generic.template.ObjectPage",
               "settings": {
                 "gridTable": true,
                 "sections": {
-                  "to_ME::com.sap.vocabularies.UI.v1.LineItem": {
+                  "Orders::com.sap.vocabularies.UI.v1.LineItem": {
                     "condensedTableLayout": false
                   }
                 }
               }
             },
             "pages": {
-              "ObjectPage|to_ME": {
-                "navigationProperty": "to_ME",
-                "entitySet": "VIBDRO",
+              "ObjectPage|Orders": {
+                "navigationProperty": "Orders",
+                "entitySet": "Orders",
                 "component": {
                   "name": "sap.suite.ui.generic.template.ObjectPage"
                 }

@@ -43,10 +43,10 @@
                 }
             },
             applications: {
-                "building-tile": {
-                    title: "buildingManagement",
+                "nortwind-tile": {
+                    title: "Customer",
                     description: "A Fiori application.",
-                    additionalInformation: "SAPUI5.Component=building",
+                    additionalInformation: "SAPUI5.Component=nortwind",
                     applicationType: "URL",
                     url: "../"
                 }
@@ -64,14 +64,12 @@
         data-sap-ui-theme="sap_fiori_3"
         data-sap-ui-compatVersion="edge"
         data-sap-ui-language="en"
-        data-sap-ui-resourceroots='{"building": "../"}'
+        data-sap-ui-resourceroots='{"nortwind": "../"}'
         data-sap-ui-frameOptions="allow"
-        data-sap-ui-flexibilityServices='[{"applyConnector":"building/test/changes_loader", "custom":true}]'>
+        data-sap-ui-flexibilityServices='[{"applyConnector":"nortwind/test/changes_loader", "custom":true}]'>
         </script>
         <script id="locate-reuse-libs" src="../utils/locate-reuse-libs.js" data-sap-ui-manifest-uri="../manifest.json">
         </script>
-    <!-- relevant for version < 1.78.0 only -->
-	<script src="changes_preview.js"></script>
 </head>
 
 <!-- UI Content -->

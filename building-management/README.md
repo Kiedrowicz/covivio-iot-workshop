@@ -1,24 +1,24 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Tue Jul 05 2022 23:10:22 GMT+0200 (Mitteleuropäische Sommerzeit)|
+|**Generation Date and Time**<br>Wed Jul 06 2022 07:42:20 GMT+0200 (Mitteleuropäische Sommerzeit)|
 |**App Generator**<br>@sap/generator-fiori-elements|
 |**App Generator Version**<br>1.6.4|
 |**Generation Platform**<br>Visual Studio Code|
 |**Floorplan Used**<br>Worklist V2|
-|**Service Type**<br>File|
-|**Metadata File**<br>metadata.xml
-|**Module Name**<br>building|
-|**Application Title**<br>buildingManagement|
+|**Service Type**<br>OData Url|
+|**Service URL**<br>https://services.odata.org/v2/northwind/northwind.svc/
+|**Module Name**<br>nortwind|
+|**Application Title**<br>Customer|
 |**Namespace**<br>|
 |**UI5 Theme**<br>sap_fiori_3|
-|**UI5 Version**<br>1.71.49|
+|**UI5 Version**<br>1.102.1|
 |**Enable Code Assist Libraries**<br>False|
 |**Add Eslint configuration**<br>False|
-|**Main Entity**<br>ZWKS_C_Building_RS|
-|**Navigation Entity**<br>to_ME|
+|**Main Entity**<br>Customers|
+|**Navigation Entity**<br>Orders|
 
-## building
+## nortwind
 
 A Fiori application.
 
