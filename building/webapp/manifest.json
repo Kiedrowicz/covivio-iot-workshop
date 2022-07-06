@@ -21,7 +21,6 @@
         "type": "OData",
         "settings": {
           "annotations": [
-            "ZWKS_C_BUILDING_SP_CDS_VAN",
             "annotation"
           ],
           "localUri": "localService/metadata.xml",
