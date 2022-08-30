@@ -40,7 +40,7 @@
                     <Collection>
                         <PropertyPath>ObjectKey</PropertyPath>
                         <PropertyPath>CompanyCode</PropertyPath>
-                        <PropertyPath>BusinessEntety</PropertyPath>
+                        <PropertyPath>BusinessEntity</PropertyPath>
                         <PropertyPath>Building</PropertyPath>
                     </Collection>
                 </Annotation>
@@ -54,7 +54,7 @@
                             <PropertyValue Property="Value" Path="CompanyCode" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="BusinessEntety" />
+                            <PropertyValue Property="Value" Path="BusinessEntity" />
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Building" />
@@ -66,7 +66,7 @@
                         <PropertyValue Property="SortOrder">
                             <Collection>
                                 <Record Type="Common.SortOrderType">
-                                    <PropertyValue Property="Property" PropertyPath="BusinessEntety" />
+                                    <PropertyValue Property="Property" PropertyPath="BusinessEntity" />
                                     <PropertyValue Property="Descending" />
                                 </Record>
                             </Collection>
@@ -81,6 +81,81 @@
                         </PropertyValue>
                         <PropertyValue Property="RequestAtLeast" />
                     </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="fgAddressData">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Intreno" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="AddressNumber" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="BuildingName" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="BuildingType" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="PostCode" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="City1" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="City2" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Street" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="HouseNum1" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Label" String="{@i18n&gt;AddressData}" />
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.CollectionFacet">
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#fgAddressData"/>
+                                        <PropertyValue Property="Label" String="{@i18n&gt;AddressData}"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                            <PropertyValue Property="Label" String="{@i18n&gt;AddressData}"/>
+                            <PropertyValue Property="ID" String="addressData"/>
+                            </Record>
+                       <Record Type="UI.ReferenceFacet">
+                        <PropertyValue Property="Target" AnnotationPath="to_RentalObjects/@UI.LineItem#liRentalObjects" />
+                        <PropertyValue Property="Label" String="{@i18n&gt;RentalObjects}" />
+                    </Record>
+                </Collection>
+                    </Annotation>
+                   
+            </Annotations>
+            <Annotations Target="ZWKS_C_BUILDING_SP_CDS.ZWKS_C_RentalObject_SPType">
+                <Annotation Term="UI.LineItem" Qualifier="liRentalObjects">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CompanyCode" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="BusinessEntity" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Building" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="RentalObject" />
+                        </Record>
+                    </Collection>
                 </Annotation>
             </Annotations>
         </Schema>
